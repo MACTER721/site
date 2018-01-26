@@ -1,0 +1,16 @@
+doctype html
+html(class="no-js", lang="ru")
+    include ../../node_modules/bemto.pug/bemto.pug
+    include ../components/head/head.pug
+
+
+    head
+        +head(head.defaults)
+    body
+        include ../components/menu/menu.pug
+        +b.wrapper
+            include ../components/content_home/content_home.pug
+        include ../components/footer/footer.pug
+
+        script(src='../../static/js/main.js')
+

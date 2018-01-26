@@ -1,0 +1,238 @@
+.wrapper-form
+    padding-top 50px
+    // overflow hidden
+
+.form-pay
+    display flex
+    justify-content center
+    align-items center
+    flex-direction column
+
+    &__title
+        font-size 24px
+        padding-bottom 40px
+
+    &__button-submit
+        height 55px
+        width 219px
+        border-radius 30px
+        background-color #1a991a
+        border none
+        outline none
+
+        &[disabled="true"] {
+            background-color #9E9E9E
+        }
+
+        span
+            font-size 18px
+            color #FFF
+            font-weight 500
+
+.input-wrap
+    display flex
+    flex-direction column
+    position relative
+    margin-bottom 60px
+
+    &__input
+        width 568px
+        height 60px
+        border 1px solid #dfe2e5
+        border-radius 6px
+        outline none
+        padding-left 20px
+
+        @media(max-width 600px)
+            width 300px
+
+    &__label
+        position absolute
+        transform translate3d(24px,16px,0)
+        top 0
+        left 0
+        font-weight 300
+        color #5b6065
+        opacity 0.75
+        transition-duration .2s
+        pointer-events none
+        line-height 1.875
+
+.slider
+    position relative
+
+    &__arrow
+        position relative
+        left calc(50% - 8px)
+        cursor pointer
+        width 16px
+
+    &__arrow:before
+        position absolute
+        top 0
+        left 0
+        content ''
+        width 0
+        height 0
+        border-style solid
+        border-width 0 8px 8px 8px
+        border-color transparent transparent #1a991a transparent
+
+    &__arrow:after
+        content ''
+        position absolute
+        top 8px
+        width 16px
+        height 23px
+        background-color #1a991a
+
+
+.document-download
+    position relative
+    background-color #F3F6F9
+    border-radius 6px
+    width 568px
+    height 106px
+    padding 10px
+    margin-bottom 35px
+    overflow hidden
+
+    @media(max-width 600px)
+        width 300px
+
+    &__delete
+        position absolute
+        top 10px
+        left 13px
+        cursor pointer
+        z-index 9
+
+    &__clear
+        position absolute
+        top 10px
+        right 13px
+        cursor pointer
+        z-index 9
+
+    &__wrap
+        text-align center
+        padding 14px 0 12px
+        height 100%
+        border-radius 6px
+        border 1px dashed #C3CBD0
+        cursor pointer
+        display block
+
+
+    &__title
+        color #C3CBD0
+        font-size 20px
+        font-weight 500
+        line-height 30px
+
+    &__add
+        color #5B6065
+        font-size 14px
+        line-height 24px
+
+    &__file
+        font-size 72px
+        position absolute
+        top 2px
+        left -23%
+        opacity 0
+        cursor pointer
+
+    span
+        color #1A991A
+        cursor pointer
+.radio-wrap
+    margin-bottom 40px
+    width 192px
+
+    &__title
+        font-size 24px
+        padding-bottom 40px
+
+    &__content
+        display flex
+        justify-content space-around
+
+.radio-controller
+    &__button
+        vertical-align: top
+        width: 17px
+        height: 17px
+        margin: 0 3px 0 0
+
+    &__button + label
+        cursor pointer
+
+    &__button:not(checked)
+        position absolute
+        opacity 0
+
+    &__button:not(checked) + label
+        line-height 1
+        position relative
+        padding 0 0 0 35px
+        font-weight 300
+
+    &__button:not(checked) + label:before
+        content ''
+        position absolute
+        top -3px
+        left 0
+        width 22px
+        height 22px
+        border 1px solid #CDD1DA
+        border-radius 50%
+        background #FFF
+
+    &__button:not(checked) + label:after
+        content ''
+        position absolute
+        top 2px
+        left 5px
+        width 12px
+        height 12px
+        border-radius 50%
+        background #9FD468
+        opacity 0
+        transition all .2s
+
+    &__button:checked + label:after
+        opacity 1
+
+
+.adress
+    width 568px
+    position relative
+
+.wrap-adress-list
+    border-radius 0 0 6px 6px
+    display none
+    border 1px solid #ddd
+    border-top 0
+    position absolute
+    z-index 2
+    top 100%
+    width 100%
+    background-color #fff
+
+.adress-list
+    list-style none
+    padding 5px 20px 10px
+
+.adress-list li
+    cursor pointer
+    padding 10px 0
+    border-bottom 1px solid #1a991a
+
+    &:hover
+        opacity 0.5
+
+.input-wrap_has_focus label
+.input-wrap_has_value label
+    transform none
+    top -30px
